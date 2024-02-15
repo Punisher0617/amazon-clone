@@ -1,0 +1,712 @@
+<html>
+	<head>
+		<title>Casual Clothing</title>
+			
+			<link href="bootstrap\bootstrap.min.css" rel="stylesheet">
+			<script src="jquery-3.6.1.js">
+			</script>
+
+			<style>
+			
+				.container-fluid{
+				background-color:#b2ebf2 ;
+				position:fixed;
+				bottom:0;
+				display:flex;
+				width:1280px;
+				}
+		
+				.container{
+				background-color:#77ffff ;
+				position:fixed;
+				top:0;
+				display:flex;
+				width:1280px;
+				justify-content: center;
+				border-bottom: 8px solid #4294ff;
+				}
+				
+				.padding-top-container
+				{
+				padding-top:auto;
+				}
+				
+				.padding-left-icon{
+				padding-left:165px;
+				}
+				
+				.padding-home{
+				padding-left:10px;
+				}
+				
+				b{
+				font-size:17px;
+				}
+				
+				.blue{
+				background-color:#4294ff;
+				width:218px;
+				height:0px;
+				position:fixed;
+				top:50;
+				right:0;
+				border-bottom: 4px solid #4294ff;
+				border-right: 4px solid #4294ff;
+				border-top: 4px solid #4294ff;
+				}
+				
+				.searchbox{
+				visibility:hidden;
+				float:right;
+				}
+				
+				.image{
+				border-radius: 50%;
+				}
+				
+				.addt{
+				left:950px;
+				top:57;
+				width:330px;
+				height:800px;
+				background-color:#dbdbdb;
+				position:fixed;
+				visibility:hidden;
+				border-left:2px solid #717171;
+				}
+				
+				#af{
+				padding-left:80px;
+				font-size:25px;
+				font-family:britannic bold;
+				color:#1500aa;
+				}
+				
+				.CloseAddToCartBtn{
+				padding-left:10px;
+				font-size:12px;
+				
+				}
+				
+				.productN{
+				font-family:Copperplate Gothic;
+				color:#01579b;
+				font-size:14px;
+				}
+				
+				.AddToCartPrise{
+				color:blue;
+				padding-left:40px;
+				font-family:Engravers MT Expanded Medium ;
+				}
+				
+				.cb1
+				{
+				background-color:#f8e500;
+				border:2px solid gray;
+				border-radius:50px 0 0 50px;
+				border-right: none;
+				width:60px;
+				height:28px;
+				color:white;
+				font-family:britannic bold;
+				
+				}
+				
+				.cr1
+				{
+				background-color:red;
+				border:2px solid gray;
+				border-radius:0 50px 50px 0;
+				border-left: none;
+				width:70px;
+				height:28px;
+				color:white;
+				font-family:britannic bold;
+				}
+				
+				
+				.details
+				{
+				border:1px solid black;
+				width:300px;
+				border-style: ridge;
+				border-radius:20px;
+				float:right;
+				background-color:#c9c9c9;
+					
+				}
+				
+				#detail,#detail1,#detail2,#detail3,#detail4,#detail5{
+				visibility:hidden;
+				position:absolute;
+				}
+				
+				.buttonb
+				{
+				background-color:#ff1744;
+				border:2px solid gray;
+				border-radius:50px 0 0 50px;
+				border-right: none;
+				width:110px;
+				height:35px;
+				color:white;
+				font-family:britannic bold;
+				}
+				
+				.buttona
+				{
+				background-color:#3d5afe;
+				border:2px solid gray;
+				border-radius:0 50px 50px 0;
+				border-left: none;
+				width:110px;
+				height:35px;
+				color:white;
+				font-family:britannic bold;
+				}
+				
+				.ptitle
+				{
+				font-family:Copperplate Gothic;
+				color:#01579b;
+				font-size:22px;
+				}
+				
+				.prise{
+				color:blue;
+				font-size:22px;
+				font-family:Engravers MT Expanded Medium ;
+				}
+				
+			</style>
+		</head>
+	
+		<body>
+			<div class="addt">
+				<p><b style="color:white" class="CloseAddToCartBtn"><button style="background-color:red" id="CloseAddToCart">X</button></b><b id="af">Add To Cart</b></p>
+				<table>
+					<tr>
+						<td>
+							<div style="padding-left:80px">
+								<img id="my_image" src="" width="" height=""/>
+								<img id="my_image2" src="" width="" height=""/>
+								<img id="my_image3" src="" width="" height=""/>
+								<img id="my_image4" src="" width="" height=""/>
+								<img id="my_image5" src="" width="" height=""/>
+								<img id="my_image6" src="" width="" height=""/>
+								
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+	
+			<div class="container">
+				<img src="Img\p1.png" alt="logo" height="50px;" width="172px;">
+			</div>
+			
+			<div class="blue" id="searchbar">
+				<div style="">
+					<input id="myInput" type="text" placeholder="Search.." id="s" class="searchbox" align="right"><button id="close" class="searchbox" style="background-color:red"><div style="color:white">X</div></button>
+				</div>
+			</div>
+	
+			<table>
+				<tr> 
+					<td><div style="padding-left:110px"><div style="padding-top:90px"><img src="product\c1.webp" width="270px" height="250px"></div></div></td>
+					<td><div style="padding-left:80px"><div style="padding-top:90px"><img src="product\c2.jpg" width="290px" height="250px"></div></div></td>
+					<td><div style="padding-left:80px"><div style="padding-top:90px"><img src="product\c4.jpg" width="270px" height="250px"></div></div></td>
+				</tr>
+				
+				<tr>
+					<td><p style="padding-left:78px"><b class="ptitle"><u> Men's  Casual Outfit Combo</u></b></p></td>
+					<td><p style="padding-left:50px"><b class="ptitle"><u> Men's  Office Casual Combo</u></b></p></td>
+					<td><p style="padding-left:90px"><b class="ptitle"><u>   Leave's Casual Outfit </u></b></p></td>
+				</tr>
+				
+				<tr>
+					<td><p style="padding-left:190px"><b class="prise">Prise:<b style="color:red">$1000</b></p></td>
+					<td><p style="padding-left:180px"><b class="prise">Prise:<b style="color:red">$5000</b></p></td>
+					<td><p style="padding-left:180px"><b class="prise">Prise:<b style="color:red">$4500</b></p></td>
+				</tr>
+				
+				<tr>
+					<td><div style="padding-left:190px"> <b style="color:gray"><u style="font-family:Engravers MT Expanded Medium"><b style="font-size:20px;">More details</b></u></b>  <img src="product\DownArrow.png" width="13px" height="21px" id="DownArrow"><img src="" width="13px" height="21px" id="UpArrow" style="visibility:hidden"></p></div></td>
+					<td><div style="padding-left:180px"> <b style="color:gray"><u style="font-family:Engravers MT Expanded Medium"><b style="font-size:20px;">More details</b></u></b>  <img src="product\DownArrow.png" width="13px" height="21px" id="DownArrow1"><img src="" width="13px" height="21px" id="UpArrow1" style="visibility:hidden"></p></div></td>
+					<td><div style="padding-left:180px"> <b style="color:gray"><u style="font-family:Engravers MT Expanded Medium"><b style="font-size:20px;">More details</b></u></b>  <img src="product\DownArrow.png" width="13px" height="21px" id="DownArrow2"><img src="" width="13px" height="21px" id="UpArrow2" style="visibility:hidden"></p></div></td>
+				</tr>
+				
+				<tr>
+					<td>
+						<div style="padding-left:40px;" id="detail"><div class="details"><p style="padding-left:40px"><u style="color:blue"><b style="font-size:20px;">Incuded Items In Combo</b></u></p>
+						
+							<ul style="padding-left:110px">
+							<li>Casual Shirt</li>
+							<li>Casual pent</li>
+							<li>Casual Shoes</li>
+							<li>Watch</li>
+							<li>Belt</li>
+							<li>Accessories</li>
+							</ul>
+								<form><p style="padding-left:75px"> <u style="color:blue"><b style="font-size:15px;">Available Size:</b></u> 
+									<select name = "dropdown">
+									<option value = "S" selected>S</option>
+									<option value = "M">M</option>
+									<option value = "X ">X</option>
+									<option value = "Xl">XL</option>
+									<option value = "XXL">XXL</option>
+									</select>
+									</p>
+								</form>
+							</div>
+						</div>
+					</td>
+			
+					<td>
+						<div style="padding-left:40px;" id="detail1"><div class="details"><p style="padding-left:40px"><u style="color:blue"><b style="font-size:20px;">Incuded Items In Combo</b></u></p>
+							<ul style="padding-left:110px">
+							<li>Casual Shirt</li>
+							<li>Casual pent</li>
+							<li>Casual Shoes</li>
+							<li>Denim Jacket</li>
+							<li>Watch</li>
+							<li>Belt</li>
+							<li>Accessories</li>
+							</ul>
+							<form><p style="padding-left:75px"> <u style="color:blue"><b style="font-size:15px;">Available Size:</b></u> 
+									<select name = "dropdown">
+									<option value = "S" selected>S</option>
+									<option value = "M">M</option>
+									<option value = "X ">X</option>
+									<option value = "Xl">XL</option>
+									<option value = "XXL">XXL</option>
+									<option value = "XXL">XXXL</option>
+									</select>
+									</p>
+								</form>
+							</div>
+						</div>
+					
+					</td>
+									
+					<td>
+							<div style="padding-left:40px;" id="detail2"><div class="details"><p style="padding-left:40px"><u style="color:blue"><b style="font-size:20px;">Incuded Items In Combo</b></u></p>
+								<ul style="padding-left:110px">
+								<li>Casual Shirt</li>
+								<li>Casual pent</li>
+								<li>Casual Shoes</li>
+								<li>Watch</li>
+								<li>Belt</li>
+								<li>Accessories</li>
+								</ul>
+									<form><p style="padding-left:75px"> <u style="color:blue"><b style="font-size:15px;">Available Size:</b></u> 
+										<select name = "dropdown">
+										<option value = "S" selected>S</option>
+										<option value = "M">M</option>
+										<option value = "X ">X</option>
+										<option value = "Xl">XL</option>
+										<option value = "XXL">XXL</option>
+										</select>
+										</p>
+									</form>
+								</div>
+							</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><div style="padding-left:145px;"><button class="buttonb" id="b1"><b>Buy Now</b></button>
+														 <button class="buttona" id="a1"><b>Add To Cart </b></button></div>
+					</td>
+					<td><div style="padding-left:145px;"><button class="buttonb" id="b2"><b >Buy Now</b></button>
+														<button class="buttona" id="a2"><b >Add To Cart </b></button></div>
+					</td>
+					<td><div style="padding-left:145px;"><button class="buttonb" id="b3"><b >Buy Now</b></button>
+														<button class="buttona" id="a3"><b >Add To Cart </b></button></div>
+					</td>
+				</tr>
+			
+			<!-- 2 ROW-->
+			
+				<tr> 
+					<td><div style="padding-left:110px"><div style="padding-top:90px"><img src="product\c5.jpg" width="270px" height="250px"></div></div></td>
+					<td><div style="padding-left:80px"><div style="padding-top:90px"><img src="product\c6.jpg" width="270px" height="250px"></div></div></td>
+					<td><div style="padding-left:80px"><div style="padding-top:90px"><img src="product\c3.jpg" width="290px" height="250px"></div></div></td>
+				</tr>
+				
+				<tr>
+					<td><p style="padding-left:78px"><b class="ptitle"><u> Holiday  Casual Outfit Combo</u></b></p></td>
+					<td><p style="padding-left:50px"><b class="ptitle"><u> Office  Casual Outfit Combo</u></b></p></td>
+					<td><p style="padding-left:50px"><b class="ptitle"><u> Men's  Casual Outfit Combo</u></b></p></td>
+				</tr>
+				
+				<tr>
+					<td><p style="padding-left:190px"><b class="prise">Prise:<b style="color:red">$8000</b></b></td>
+					<td><p style="padding-left:180px"><b class="prise">Prise:<b style="color:red">$7000</b></b></td>
+					<td><p style="padding-left:180px"><b class="prise">Prise:<b style="color:red">$2000</b></b></td>
+				</tr>
+				
+				<tr>
+					<td><div style="padding-left:190px"> <b style="color:gray"><u style="font-family:Engravers MT Expanded Medium"><b style="font-size:20px;">More details</b></u></b>  <img src="product\DownArrow.png" width="13px" height="21px" id="DownArrow3"><img src="" width="13px" height="21px" id="UpArrow3" style="visibility:hidden"></p></div></td>
+					<td><div style="padding-left:180px"> <b style="color:gray"><u style="font-family:Engravers MT Expanded Medium"><b style="font-size:20px;">More details</b></u></b>  <img src="product\DownArrow.png" width="13px" height="21px" id="DownArrow4"><img src="" width="13px" height="21px" id="UpArrow4" style="visibility:hidden"></p></div></td>
+					<td><div style="padding-left:180px"> <b style="color:gray"><u style="font-family:Engravers MT Expanded Medium"><b style="font-size:20px;">More details</b></u></b>  <img src="product\DownArrow.png" width="13px" height="21px" id="DownArrow5"><img src="" width="13px" height="21px" id="UpArrow5" style="visibility:hidden"></p></div></td>
+				</tr>
+				
+				<tr>
+					<td>
+						<div style="padding-left:40px;" id="detail3"><div class="details"><p style="padding-left:40px"><u style="color:blue"><b style="font-size:20px;">Incuded Items In Combo</b></u></p>
+							<ul style="padding-left:110px">
+								<li>Casual Shirt</li>
+								<li>Casual pent</li>
+								<li>Casual Shoes</li>
+								<li>Watch</li>
+								<li>Belt</li>
+								<li>Accessories</li>
+							</ul>
+								<form><p style="padding-left:75px"> <u style="color:blue"><b style="font-size:15px;">Available Size:</b></u> </p>
+										<select name = "dropdown">
+											<option value = "S" selected>S</option>
+											<option value = "M">M</option>
+											<option value = "X ">X</option>
+											<option value = "Xl">XL</option>
+											<option value = "XXL">XXL</option>
+										</select>
+								</form>
+							</div>
+						</div>
+					</td>
+			
+					<td>
+						<div style="padding-left:40px;" id="detail4"><div class="details"><p style="padding-left:40px"><u style="color:blue"><b style="font-size:20px;">Incuded Items In Combo</b></u></p>
+							<ul style="padding-left:110px">
+								<li>Casual Shirt</li>
+								<li>Casual pent</li>
+								<li>Casual Shoes</li>
+								<li>Watch</li>
+								<li>Belt</li>
+								<li>Accessories</li>
+							</ul>
+								<form><p style="padding-left:75px"> <u style="color:blue"><b style="font-size:15px;">Available Size:</b></u></p>
+											<select name = "dropdown">
+												<option value = "S" selected>S</option>
+												<option value = "M">M</option>
+												<option value = "X ">X</option>
+												<option value = "Xl">XL</option>
+												<option value = "XXL">XXL</option>
+											</select>
+								</form>
+							</div>
+						</div>
+					</td>
+												
+					<td>
+						<div style="padding-left:40px;" id="detail5"><div class="details"><p style="padding-left:40px"><u style="color:blue"><b style="font-size:20px;">Incuded Items In Combo</b></u></p>
+							<ul style="padding-left:110px">
+								<li>Casual Shirt</li>
+								<li>Casual pent</li>
+								<li>Casual Shoes</li>
+								<li>Watch</li>
+								<li>Belt</li>
+								<li>Accessories</li>
+							</ul>
+								<form><p style="padding-left:75px"> <u style="color:blue"><b style="font-size:15px;">Available Size:</b></u></p>
+										<select name = "dropdown">
+												<option value = "S" selected>S</option>
+												<option value = "M">M</option>
+												<option value = "X ">X</option>
+												<option value = "Xl">XL</option>
+												<option value = "XXL">XXL</option>
+										</select>
+								</form>
+							</div>
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><div style="padding-left:145px;"><button class="buttonb" id="b1"><b>Buy Now</b></button>
+											             <button class="buttona" id="a4"><b>Add To Cart </b></button></div>
+					</td>
+					<td><div style="padding-left:145px;"><button class="buttonb" id="b2"><b >Buy Now</b></button>
+														 <button class="buttona" id="a5"><b >Add To Cart </b></button></div>
+					</td>
+					<td><div style="padding-left:145px;"><button class="buttonb" id="b3"><b >Buy Now</b></button>
+														 <button class="buttona" id="a6"><b >Add To Cart </b></button></div>
+					</td>
+				</tr>
+	
+			</table>
+	
+			<div class="padding-top-container">
+				<div class="container-fluid">
+					<table>
+						<tr>
+							<td><div class="padding-home"><img src="img\home.png" height="40px;" width="40px"> <b>Home</b></div>
+							<td><div class="padding-left-icon"><img src="img\add-to-cart.png" height="40px;" width="44px" id="AddToCart"><b>Add To Cart</b></div></td>
+							<td><div class="padding-left-icon"><img src="img\search.png" id="search" height="37px;" width="37x"><b id="search">Search</b></div></td></td>
+							<td><div class="padding-left-icon"><img src="img\user.png" height="35px;" width="37px"><b>Profil</b></div></td>
+							<td><div class="padding-left-icon"><img src="img\contact-us(1).png" height="40px;" width="45px"><b>Contact Us</b></div></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+	
+	
+		<script>
+			$(document).ready(function(){
+				<!-- Add To Cart Product1 -->
+				$('#a1').click(function(){
+				$("#my_image").attr("src", "product/c1.webp");
+				$("#my_image").attr("width", "160px");
+				$("#my_image").attr("height", "150px");
+				$("#my_image").after('<div style="padding-left:20px;"><button class="cb1"><b>Buy</b></button> <button class="cr1" id="RemoveFromeCart"><b>Remove</b></button></div>');
+				$("#my_image").after('<p><b class="AddToCartPrise">Prise:<b style="color:red">$1000</b></p>');
+				$("#my_image").after('<p class="productN"><b style="padding-right:20px;">Casual Outfit Combo</b></p>');
+				});
+				
+				<!-- Add To Cart Product2 -->
+				
+				$('#a2').click(function(){
+				$("#my_image2").attr("src", "product/c2.jpg");
+				$("#my_image2").attr("width", "160px");
+				$("#my_image2").attr("height", "150px");
+				$("#my_image2").after('<div style="padding-left:20px;"><button class="cb1"><b>Buy</b></button> <button class="cr1" id="RemoveFromeCart"><b>Remove</b></button></div>');
+				$("#my_image2").after('<p><b class="AddToCartPrise">Prise:<b style="color:red">$5000</b></p>');
+				$("#my_image2").after('<p class="productN"><b style="padding-right:20px;">Office Casual Combo</b></p>');
+				});
+				
+				<!-- Add To Cart Product3 -->
+				
+				$('#a3').click(function(){
+				$("#my_image3").attr("src", "product/c4.jpg");
+				$("#my_image3").attr("width", "160px");
+				$("#my_image3").attr("height", "150px");
+				$("#my_image3").after('<div style="padding-left:20px;"><button class="cb1"><b>Buy</b></button> <button class="cr1" id="RemoveFromeCart"><b>Remove</b></button></div>');
+				$("#my_image3").after('<p><b class="AddToCartPrise">Prise:<b style="color:red">$5000</b></p>');
+				$("#my_image3").after('<p class="productN"><b style="padding-right:20px;">Office Casual Combo</b></p>');
+				});
+				
+				<!-- Add To Cart Product4 -->
+				
+				$('#a4').click(function(){
+				$("#my_image4").attr("src", "product/c5.jpg");
+				$("#my_image4").attr("width", "160px");
+				$("#my_image4").attr("height", "150px");
+				$("#my_image4").after('<div style="padding-left:20px;"><button class="cb1"><b>Buy</b></button> <button class="cr1" id="RemoveFromeCart"><b>Remove</b></button></div>');
+				$("#my_image4").after('<p><b class="AddToCartPrise">Prise:<b style="color:red">$5000</b></p>');
+				$("#my_image4").after('<p class="productN"><b style="padding-right:20px;">Office Casual Combo</b></p>');
+				});
+				
+				<!-- Add To Cart Product5 -->
+				
+				$('#a5').click(function(){
+				$("#my_image5").attr("src", "product/c6.jpg");
+				$("#my_image5").attr("width", "160px");
+				$("#my_image5").attr("height", "150px");
+				$("#my_image5").after('<div style="padding-left:20px;"><button class="cb1"><b>Buy</b></button> <button class="cr1" id="RemoveFromeCart"><b>Remove</b></button></div>');
+				$("#my_image5").after('<p><b class="AddToCartPrise">Prise:<b style="color:red">$5000</b></p>');
+				$("#my_image5").after('<p class="productN"><b style="padding-right:20px;">Office Casual Combo</b></p>');
+				});
+				
+				<!-- Add To Cart Product6 -->
+				
+				$('#a6').click(function(){
+				$("#my_image6").attr("src", "product/c3.jpg");
+				$("#my_image6").attr("width", "160px");
+				$("#my_image6").attr("height", "150px");
+				$("#my_image6").after('<div style="padding-left:20px;"><button class="cb1"><b>Buy</b></button> <button class="cr1" id="RemoveFromeCart"><b>Remove</b></button></div>');
+				$("#my_image6").after('<p><b class="AddToCartPrise">Prise:<b style="color:red">$5000</b></p>');
+				$("#my_image6").after('<p class="productN"><b style="padding-right:20px;">Office Casual Combo</b></p>');
+				});
+
+				$('#CloseAddToCart').click(function(){
+				$('.addt').css({"visibility":"hidden"});
+				});
+				
+				$('#AddToCart').click(function(){
+				$('.addt').css({"visibility":"visible"});
+				});
+				
+				$('#search').click(function(slow){
+				$('#searchbar').css({"height":"36px"});
+				$('.searchbox').css({"visibility":"visible"});
+				});
+				
+				$('#close').click(function(slow){
+				$('#searchbar').css({"height":"0px"});
+				$('.searchbox').css({"visibility":"hidden"});
+				});
+				
+				<!-- 1Details-->
+				$('#DownArrow').click(function(){
+				$('#detail').css({"visibility":"visible"});
+				$('#UpArrow').attr("src", "product/UpArrow.png");
+				$('#UpArrow').css({"visibility":"visible"});
+				$('#DownArrow').css({"visibility":"hidden"});
+				});
+				
+				$('#UpArrow').click(function(){
+				$('#DownArrow').css({"visibility":"visible"});
+				$('#detail').css({"visibility":"hidden"});
+				$('#UpArrow').attr("src", "");
+				$('#UpArrow').css({"visibility":"hidden"});
+				});
+				<!-- 2Details-->
+				$('#DownArrow1').click(function(){
+				$('#detail1').css({"visibility":"visible"});
+				$('#UpArrow1').attr("src", "product/UpArrow.png");
+				$('#UpArrow1').css({"visibility":"visible"});
+				$('#DownArrow1').css({"visibility":"hidden"});
+				});
+				$('#UpArrow1').click(function(){
+				$('#DownArrow1').css({"visibility":"visible"});
+				$('#detail1').css({"visibility":"hidden"});
+				$('#UpArrow1').attr("src", "");
+				$('#UpArrow1').css({"visibility":"hidden"});
+				});
+				
+				<!-- 3Details-->
+				$('#DownArrow2').click(function(){
+				$('#detail2').css({"visibility":"visible"});
+				$('#UpArrow2').attr("src", "product/UpArrow.png");
+				$('#UpArrow2').css({"visibility":"visible"});
+				$('#DownArrow2').css({"visibility":"hidden"});
+				});
+				$('#UpArrow2').click(function(){
+				$('#DownArrow2').css({"visibility":"visible"});
+				$('#detail2').css({"visibility":"hidden"});
+				$('#UpArrow2').attr("src", "");
+				$('#UpArrow2').css({"visibility":"hidden"});
+				});
+				
+				<!-- 4Details-->
+				$('#DownArrow3').click(function(){
+				$('#detail3').css({"visibility":"visible"});
+				$('#UpArrow3').attr("src", "product/UpArrow.png");
+				$('#UpArrow3').css({"visibility":"visible"});
+				$('#DownArrow3').css({"visibility":"hidden"});
+				});
+				$('#UpArrow3').click(function(){
+				$('#DownArrow3').css({"visibility":"visible"});
+				$('#detail3').css({"visibility":"hidden"});
+				$('#UpArrow3').attr("src", "");
+				$('#UpArrow3').css({"visibility":"hidden"});
+				});
+				
+				<!-- 5Details-->
+				$('#DownArrow4').click(function(){
+				$('#detail4').css({"visibility":"visible"});
+				$('#UpArrow4').attr("src", "product/UpArrow.png");
+				$('#UpArrow4').css({"visibility":"visible"});
+				$('#DownArrow4').css({"visibility":"hidden"});
+				});
+				$('#UpArrow4').click(function(){
+				$('#DownArrow4').css({"visibility":"visible"});
+				$('#detail4').css({"visibility":"hidden"});
+				$('#UpArrow4').attr("src", "");
+				$('#UpArrow4').css({"visibility":"hidden"});
+				});
+				
+				<!-- 6Details-->
+				$('#DownArrow5').click(function(){
+				$('#detail5').css({"visibility":"visible"});
+				$('#UpArrow5').attr("src", "product/UpArrow.png");
+				$('#UpArrow5').css({"visibility":"visible"});
+				$('#DownArrow5').css({"visibility":"hidden"});
+				});
+				$('#UpArrow5').click(function(){
+				$('#DownArrow5').css({"visibility":"visible"});
+				$('#detail5').css({"visibility":"hidden"});
+				$('#UpArrow5').attr("src", "");
+				$('#UpArrow5').css({"visibility":"hidden"});
+				});
+				
+				$('#b1,#a1').mouseenter(function(){
+				$(this).css({"width":"120",
+							 "height":"40",
+							 "border-color":"#00ffed",
+							 "color":"#00ffed"});
+							 });
+							 
+				$('#b1,#a1').mouseleave(function(){
+				$(this).css({"width":"110",
+							 "height":"35",
+							 "border-color":"gray",
+							 "color":"white"});
+							 });
+				
+				$('#b2,#a2').mouseenter(function(){
+				$(this).css({"width":"120",
+							 "height":"40",
+							 "border-color":"#00ffed",
+							 "color":"#00ffed"});
+							 });
+							 
+				$('#b2,#a2').mouseleave(function(){
+				$(this).css({"width":"110",
+							 "height":"35",
+							 "border-color":"gray",
+							 "color":"white"});
+							 });
+							 
+				$('#b3,#a3').mouseenter(function(){
+				$(this).css({"width":"120",
+							 "height":"40",
+							 "border-color":"#00ffed",
+							 "color":"#00ffed"});
+							 });
+							 
+				$('#b3,#a3').mouseleave(function(){
+				$(this).css({"width":"110",
+							 "height":"35",
+							 "border-color":"gray",
+							 "color":"white"});
+							 });
+							 
+				$('#b4,#a4').mouseenter(function(){
+				$(this).css({"width":"120",
+							 "height":"40",
+							 "border-color":"#00ffed",
+							 "color":"#00ffed"});
+							 });
+							 
+				$('#b4,#a4').mouseleave(function(){
+				$(this).css({"width":"110",
+							 "height":"35",
+							 "border-color":"gray",
+							 "color":"white"});
+							 });
+							 
+				$('#b5,#a5').mouseenter(function(){
+				$(this).css({"width":"120",
+							 "height":"40",
+							 "border-color":"#00ffed",
+							 "color":"#00ffed"});
+							 });
+							 
+				$('#b5,#a5').mouseleave(function(){
+				$(this).css({"width":"110",
+							 "height":"35",
+							 "border-color":"gray",
+							 "color":"white"});
+							 });
+							 
+				$('#b6,#a6').mouseenter(function(){
+				$(this).css({"width":"120",
+							 "height":"40",
+							 "border-color":"#00ffed",
+							 "color":"#00ffed"});
+							 });
+							 
+				$('#b6,#a6').mouseleave(function(){
+				$(this).css({"width":"110",
+							 "height":"35",
+							 "border-color":"gray",
+							 "color":"white"});
+							 });
+			});
+		</script>
+	
+	</body>
+</html>

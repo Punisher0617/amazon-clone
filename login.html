@@ -1,0 +1,203 @@
+<html>
+	<head>
+		<title>Amazon</title>
+		<meta name="viewport" content="width-device-width,initial-scale=1.0">
+		<link href="bootstrap\bootstrap.min.css" rel="stylesheet">
+		<script src="jquery-3.6.1.js">
+		</script>
+		<script type="text/javascript">
+			function email_validation()
+			{
+				email_id=document.getElementById("email").value;
+				at_position = email_id.indexOf("@");
+				dot_position = email_id.lastIndexOf(".");
+				if(at_position<1||(dot_position - at_position<2))
+				{
+				alert("Please enter correct email Id")
+				return false;
+			}
+			return(true);
+			}
+		</script>
+		<style>
+			.ridge {
+				border-style: ridge;
+				border-width:2px;
+				width: 30%;
+			}
+
+			#eLable{
+			
+				padding-right:140px;
+			}
+
+			.text{
+				padding-right:270px;
+				font-size:23px;
+			}
+
+			.padding{
+				padding-left:17px;
+				padding-right:20px;
+			}
+			
+			input[type=text]:focus{
+			outline: 2px solid red;
+			}
+ 
+			.button{
+				background-image: linear-gradient(to bottom, #fffde7 0%, #ffd54f  51%, #ffca28  100%);
+				text-align:center;
+				border-width:1px;
+				width: 100%;
+				padding: 5px 24px;
+				border-radius: 3px;
+			}
+
+			.button2:hover{
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+			
+			.buttonpadding{
+				padding-top:10px;
+			}
+			.red{
+			color:red;
+			float:left;
+			font-size:13px;
+			}
+			
+			#new{
+				font-size: 11px;
+				color:darkgrey; 
+				padding-top:13px;
+			}
+
+			#button2{
+				width: 390px;
+				height: 30px;
+			}
+
+			@media screen and (max-width:600px)
+			{
+				#hImg{
+				width:140px;
+				height:35px;
+				}
+				
+				.ridge {
+				border-style: ridge;
+				border-width:2px;
+				width: 60%;
+				}
+				
+				.text{
+				padding-right:120px;
+				font-size:20px;
+			}
+			
+			#eLable{
+				font-size:10px;
+				padding-right:30px;
+			}
+
+			#new{
+				font-size: 9px;
+				padding-right: 120px;
+			}
+
+			#button2{
+				width: 230px;
+				height: 30px;
+			}
+			
+			
+			}
+			
+	</style>
+	</head>
+	<body>
+	<form name="form1" action="password.html" method="post" onSubmit="return email_validation();">
+		<center style="padding-top:60px;"><img src="Img\p.png" alt="logo" height="45px;" width="165px;" id="hImg"></center>
+		<center>
+			<div  class="ridge">
+				<table>
+					<form>
+						<p class="text">Sing in</p>
+						<div class="form-group">
+							<label for="email" id="eLable">Email or mobile phone number</label>
+							<div class="padding">
+							<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+							<div class="buttonpadding">
+							<a href="password.html" style="color:black"><input type="submit" class="button button2" value="Continue" id="button" onclick="email_validation()"></a>
+							</div>
+						</div>
+					   </div>
+					</form>
+				</table>
+			</div>		
+			<p  id="new">_________________________New To Amazon?________________________</p>
+			<a href="J1.html"><input type="submit"  value="Creat your Amazon account"  id="button2" ></a>
+		</center>
+	<script>
+		$(document).ready(function(){
+			$('#email').mouseenter(function(){
+				$(this).css({
+				"width":"355px",
+				"height":"38px",
+				"borderColor":"#ffca28",
+				
+				"borderWidth":"2px"
+				});
+			});
+			$('#email').mouseleave(function(){
+				$(this).css({
+				"width":"345px",
+				"height":"34px",
+				"borderColor":"white",
+				"borderStyle": "ridge"
+				});
+			});
+			$('#button').mouseenter(function(){
+				$(this).css({
+				"width":"352px",
+				"height":"37px",
+				"backgroundImage":"linear-gradient(to bottom, #ffca28  0%,  #ffd54f     51%, #fffde7  100%)"
+				});
+			});
+			$('#button').mouseleave(function(){
+				$(this).css({
+				"width":"345px",
+				"height":"34px",
+				"backgroundImage":"linear-gradient(to bottom, #fffde7 0%, #ffd54f  51%, #ffca28  100%)"
+				});
+			});
+			$('#button2').mouseenter(function(){
+				$(this).css({
+				"width":"390px",
+				"height":"37px",
+				});
+			});
+			$('#button2').mouseleave(function(){
+				$(this).css({
+				"width":"386px",
+				"height":"34px",
+				
+				});
+			});
+			 $("#email").focus();
+				$("#email").blur(function(){
+				var name=$('#email').val();
+				if(name.length == 0){
+				$('#email').after('<div class="red">*This Field Is Required</div>');
+				$(this).css({"border-color":"red",
+							 "border-width":"2px"});
+				}
+				else {
+				return true;
+				}
+				});
+		});
+		</script>
+	</body>
+</html>
